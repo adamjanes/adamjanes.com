@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Janes — Fractional CTO</title>
+    <meta name="description" content="Fractional CTO for startups. Architecture, code, and technical leadership — without building a team.">
+    <meta property="og:title" content="Adam Janes — Fractional CTO">
+    <meta property="og:description" content="Architecture, code, and technical leadership for startups — without building a team.">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="nav">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="#" class="text-lg font-bold tracking-tight text-white">Adam Janes</a>
+            <div class="flex items-center gap-8">
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-sm text-slate-400 hover:text-white transition-colors">Services</a>
+                    <a href="#approach" class="text-sm text-slate-400 hover:text-white transition-colors">Approach</a>
+                    <a href="#about" class="text-sm text-slate-400 hover:text-white transition-colors">About</a>
+                </div>
+                <a href="#contact" class="px-5 py-2.5 bg-amber-400 text-slate-950 text-sm font-semibold rounded-lg hover:bg-amber-300 transition-colors">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center bg-slate-950 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(251,191,36,0.04)_0%,_transparent_50%)]"></div>
+        <div class="max-w-6xl mx-auto px-6 py-32 relative z-10">
+            <p class="text-amber-400 font-semibold mb-8 tracking-widest uppercase text-sm">Fractional CTO</p>
+            <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight text-white leading-[0.95] mb-8">
+                Build first.<br>Hire later.
+            </h1>
+            <p class="text-xl sm:text-2xl text-slate-400 max-w-2xl leading-relaxed mb-12">
+                I ship products for startups. You get architecture, code, and technical leadership — without building a team.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-amber-400 text-slate-950 font-semibold rounded-lg hover:bg-amber-300 transition-colors text-lg">Let's talk</a>
+                <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-slate-700 text-slate-300 font-medium rounded-lg hover:border-slate-500 hover:text-white transition-colors text-lg">How it works<span class="ml-2">&darr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="py-24 sm:py-32">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-12">The hiring trap</h2>
+            <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                <p>Most startups burn through their first six months trying to build a tech team before they've built a product.</p>
+                <p>A full-time CTO costs $250K+ before they write a line of code. Agencies charge six figures for a prototype and hand you a codebase nobody can maintain. And that offshore team you found on a freelancer platform? They'll build exactly what you asked for — which is never quite what you needed.</p>
+                <p>Meanwhile, your competitors shipped last month.</p>
+                <p class="text-slate-900 font-medium text-xl border-l-4 border-amber-400 pl-6 py-2">There's a simpler model: hire one senior technical person who architects, builds, and ships — and who has enough skin in the game to care whether it works.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 sm:py-32 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-amber-600 font-semibold mb-4 tracking-widest uppercase text-sm">Services</p>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Three ways to work together</h2>
+            <p class="text-lg text-slate-600 mb-16 max-w-2xl">Every engagement is different. Pick the model that fits your stage, or we'll figure out the right combination together.</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                    <span class="text-5xl font-extrabold text-slate-100 mb-6">01</span>
+                    <h3 class="text-xl font-bold mb-2">Full Fractional CTO</h3>
+                    <p class="text-amber-600 text-sm font-medium mb-6">Monthly retainer + equity</p>
+                    <p class="text-slate-600 leading-relaxed mb-6">Your technical co-founder — without giving up half your company. I embed in your team as CTO. I make architecture decisions, write production code, review pull requests, and hire developers when you need them.</p>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Architecture, code, and technical strategy</li>
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>I take equity because I back what I build</li>
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Weekly calls, daily availability</li>
+                    </ul>
+                    <p class="text-sm text-slate-500 pt-6 border-t border-slate-100"><span class="font-medium text-slate-700">Best for:</span> Pre-seed to Series A startups that need a senior technical leader who builds, not just advises.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                    <span class="text-5xl font-extrabold text-slate-100 mb-6">02</span>
+                    <h3 class="text-xl font-bold mb-2">Micro Fractional</h3>
+                    <p class="text-amber-600 text-sm font-medium mb-6">A few hours per day</p>
+                    <p class="text-slate-600 leading-relaxed mb-6">Your team has builders. They need an architect. I design your system, review your code, and set the technical direction. Your developers handle implementation under my guidance.</p>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>System design and code reviews</li>
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Technical mentorship for your team</li>
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Standards that prevent costly rework</li>
+                    </ul>
+                    <p class="text-sm text-slate-500 pt-6 border-t border-slate-100"><span class="font-medium text-slate-700">Best for:</span> Companies that have developers but lack senior technical leadership.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                    <span class="text-5xl font-extrabold text-slate-100 mb-6">03</span>
+                    <h3 class="text-xl font-bold mb-2">Managed Development</h3>
+                    <p class="text-amber-600 text-sm font-medium mb-6">My network, your roadmap</p>
+                    <p class="text-slate-600 leading-relaxed mb-6">I source and manage developers from my network in Vietnam. I handle recruitment, onboarding, technical direction, and quality control. You get a fully managed dev capability.</p>
+                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Vetted developers I've trained and trust</li>
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>AI-enabled workflow for faster output</li>
+                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Scales up or down with the project</li>
+                    </ul>
+                    <p class="text-sm text-slate-500 pt-6 border-t border-slate-100"><span class="font-medium text-slate-700">Best for:</span> Projects that need more capacity than one person can provide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach -->
+    <section id="approach" class="py-24 sm:py-32 bg-slate-950 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-amber-400 font-semibold mb-4 tracking-widest uppercase text-sm">Approach</p>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">How I work</h2>
+            <p class="text-lg text-slate-400 mb-16 max-w-2xl">Four principles that shape every engagement. No exceptions.</p>
+
+            <div class="grid sm:grid-cols-2 gap-12 sm:gap-16">
+                <div class="border-l-2 border-amber-400/40 pl-8">
+                    <h3 class="text-xl font-bold mb-4">Architecture First</h3>
+                    <p class="text-slate-400 leading-relaxed">We define what we're building before we build it. Data models, user flows, API boundaries, deployment strategy. I've seen too many startups burn money rebuilding something that was never properly designed.</p>
+                </div>
+                <div class="border-l-2 border-amber-400/40 pl-8">
+                    <h3 class="text-xl font-bold mb-4">Standard Tools</h3>
+                    <p class="text-slate-400 leading-relaxed">Supabase, Vercel, Stripe, established auth providers. The best technology is the one everyone else has already debugged. I'm not going to use your runway to beta-test someone else's framework.</p>
+                </div>
+                <div class="border-l-2 border-amber-400/40 pl-8">
+                    <h3 class="text-xl font-bold mb-4">AI-First Development</h3>
+                    <p class="text-slate-400 leading-relaxed">I run a system of specialised AI agents under my direction — architect, designer, executor, reviewer. Think of it like a construction site: I'm the foreman, the AI is the crew. The architecture and quality bar are mine. The speed isn't something a solo human can match.</p>
+                </div>
+                <div class="border-l-2 border-amber-400/40 pl-8">
+                    <h3 class="text-xl font-bold mb-4">Full Transparency</h3>
+                    <p class="text-slate-400 leading-relaxed">You'll understand every technical decision and why it was made. No black boxes. No jargon as a substitute for clarity. If I can't explain a decision simply, I haven't thought about it enough.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track Record -->
+    <section class="py-24 sm:py-32 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-amber-600 font-semibold mb-4 tracking-widest uppercase text-sm">Track Record</p>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-16">What I've built</h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /></svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Talent Marketplace</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Full platform with candidate profiles, admin portal, agreement flows, and AI-powered job description generation. 1,000+ candidates onboarded.</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Digital Community</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Citizen dashboard, interactive world map, event integration, and profile system for a 400-member global digital nation.</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" /></svg>
+                    </div>
+                    <h3 class="font-bold mb-2">Healthcare SaaS Audit</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Full technical audit of a 42,000-line AI-powered SaaS codebase. Found 5 critical security vulnerabilities, delivered actionable roadmap.</p>
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" /></svg>
+                    </div>
+                    <h3 class="font-bold mb-2">AI Content Tools</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Content pipeline with automated research, drafting, and publishing. Scraping infrastructure, LLM orchestration, and editorial workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 sm:py-32">
+        <div class="max-w-3xl mx-auto px-6">
+            <p class="text-amber-600 font-semibold mb-4 tracking-widest uppercase text-sm">About</p>
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-12">The short version</h2>
+            <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                <p>I've been working as a fractional CTO since 2021, originally through Mission Plus — a consultancy based in Singapore that helps early-stage startups get from an idea to a working product.</p>
+                <p>My background is in economics, not computer science. That shapes everything about how I approach technology: every technical decision is a business decision. I don't reach for the newest framework because it's exciting — I use whatever gets you to market fastest with the least risk.</p>
+                <p>Over the past five years I've built products across Singapore, Vietnam, Australia, and the UK. I've managed remote development teams, run technical due diligence, and shipped production code for companies ranging from pre-revenue startups to funded scale-ups.</p>
+                <p>In 2025, I rebuilt my entire workflow around AI-first development. Not because it's fashionable — because the economics changed. One person with the right process and the right tools can now deliver what used to take a five-person team. I've structured my whole practice around that shift.</p>
+                <p class="text-slate-900 font-medium">Based in Sydney, Australia. Originally from York, England.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="py-24 sm:py-32 bg-slate-950 text-white">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6">Let's build something.</h2>
+            <p class="text-xl text-slate-400 mb-12 leading-relaxed">The best way to start is a conversation. No pitch deck required — just tell me what you're building and where you're stuck.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <a href="mailto:Adam.Michael.Janes@gmail.com" class="inline-flex items-center justify-center px-8 py-4 bg-amber-400 text-slate-950 font-semibold rounded-lg hover:bg-amber-300 transition-colors text-lg">Email me</a>
+                <a href="https://linkedin.com/in/adamjanes" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 border border-slate-700 text-slate-300 font-medium rounded-lg hover:border-slate-500 hover:text-white transition-colors text-lg">LinkedIn</a>
+            </div>
+            <div class="flex justify-center gap-8 text-sm text-slate-500">
+                <a href="https://github.com/adamjanes" target="_blank" rel="noopener" class="hover:text-slate-300 transition-colors">GitHub</a>
+                <span class="text-slate-700">|</span>
+                <span>Sydney, Australia</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center text-sm text-slate-600">
+            &copy; 2026 Adam Janes. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Nav scroll effect
+        const nav = document.getElementById('nav');
+        const heroHeight = window.innerHeight;
+
+        function updateNav() {
+            if (window.scrollY > heroHeight - 100) {
+                nav.classList.add('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-slate-200');
+                nav.querySelector('a').classList.remove('text-white');
+                nav.querySelector('a').classList.add('text-slate-900');
+                nav.querySelectorAll('.hidden a').forEach(function(a) {
+                    a.classList.remove('text-slate-400');
+                    a.classList.add('text-slate-600');
+                    a.classList.remove('hover:text-white');
+                    a.classList.add('hover:text-slate-900');
+                });
+            } else {
+                nav.classList.remove('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-slate-200');
+                nav.querySelector('a').classList.add('text-white');
+                nav.querySelector('a').classList.remove('text-slate-900');
+                nav.querySelectorAll('.hidden a').forEach(function(a) {
+                    a.classList.add('text-slate-400');
+                    a.classList.remove('text-slate-600');
+                    a.classList.add('hover:text-white');
+                    a.classList.remove('hover:text-slate-900');
+                });
+            }
+        }
+
+        window.addEventListener('scroll', updateNav);
+        updateNav();
+    </script>
+</body>
+</html>
