@@ -15,6 +15,27 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        heading: ['"Space Grotesk"', 'Inter', 'system-ui', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+                    },
+                    colors: {
+                        canvas: '#0A0A0A',
+                        surface: '#141414',
+                        'surface-hover': '#1a1a1a',
+                        line: '#262626',
+                        'line-subtle': '#1a1a1a',
+                        ink: '#FFFFFF',
+                        body: '#A3A3A3',
+                        muted: '#525252',
+                        strong: '#D4D4D4',
+                        sand: {
+                            DEFAULT: '#D4C4A0',
+                            hover: '#C4B48E',
+                            subtle: 'rgba(212, 196, 160, 0.06)',
+                        },
+                    },
+                    letterSpacing: {
+                        label: '0.2em',
                     },
                 }
             }
@@ -22,284 +43,277 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        html, body { background: #0A0A0A; }
+        body { color: #A3A3A3; }
+        ::selection { background: #D4C4A0; color: #0A0A0A; }
+    </style>
 </head>
-<body class="bg-white text-slate-900 antialiased">
+<body class="bg-canvas text-body antialiased font-sans">
 
     <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="nav">
         <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-            <a href="#" class="text-lg font-bold tracking-tight text-white">Adam Janes</a>
+            <a href="#" class="text-lg font-heading font-bold tracking-tight text-ink">Adam Janes</a>
             <div class="flex items-center gap-8">
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#services" class="text-sm text-slate-400 hover:text-white transition-colors">Services</a>
-                    <a href="#approach" class="text-sm text-slate-400 hover:text-white transition-colors">Approach</a>
-                    <a href="#about" class="text-sm text-slate-400 hover:text-white transition-colors">About</a>
+                    <a href="#services" class="text-sm text-body hover:text-ink transition-colors">Services</a>
+                    <a href="#approach" class="text-sm text-body hover:text-ink transition-colors">Approach</a>
+                    <a href="#about" class="text-sm text-body hover:text-ink transition-colors">About</a>
                 </div>
-                <a href="#contact" class="px-5 py-2.5 bg-amber-400 text-slate-950 text-sm font-semibold rounded-lg hover:bg-amber-300 transition-colors">Get in Touch</a>
+                <a href="#contact" class="px-5 py-2.5 bg-sand text-canvas text-sm font-semibold rounded-lg hover:bg-sand-hover transition-colors">Get in Touch</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="min-h-screen flex items-center bg-slate-950 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(251,191,36,0.04)_0%,_transparent_50%)]"></div>
+    <section class="min-h-screen flex items-center bg-canvas relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(212,196,160,0.06)_0%,_transparent_55%)]"></div>
         <div class="max-w-6xl mx-auto px-6 py-32 relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
             <div class="flex-1">
-                <p class="text-amber-400 font-semibold mb-8 tracking-widest uppercase text-sm">Fractional CTO</p>
-                <h1 class="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight text-white leading-[0.95] mb-8">
+                <p class="text-sand font-medium mb-8 tracking-label uppercase text-xs">Fractional CTO</p>
+                <h1 class="font-heading text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight text-ink leading-[0.95] mb-8">
                     Build first.<br>Hire later.
                 </h1>
-                <p class="text-xl sm:text-2xl text-slate-400 max-w-2xl leading-relaxed mb-12">
+                <p class="text-xl sm:text-2xl text-body max-w-2xl leading-relaxed mb-12">
                     I ship products for startups. You get architecture, code, and technical leadership — without building a team.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-amber-400 text-slate-950 font-semibold rounded-lg hover:bg-amber-300 transition-colors text-lg">Let's talk</a>
-                    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-slate-700 text-slate-300 font-medium rounded-lg hover:border-slate-500 hover:text-white transition-colors text-lg">How it works<span class="ml-2">&darr;</span></a>
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-sand text-canvas font-semibold rounded-lg hover:bg-sand-hover transition-colors text-lg">Let's talk</a>
+                    <a href="#services" class="inline-flex items-center justify-center px-8 py-4 border border-line text-strong font-medium rounded-lg hover:border-sand hover:text-ink transition-colors text-lg">How it works<span class="ml-2">&darr;</span></a>
                 </div>
             </div>
             <div class="flex-shrink-0">
-                <img src="img/profile.jpg" alt="Adam Janes" class="w-64 h-64 lg:w-80 lg:h-80 rounded-2xl object-cover shadow-2xl shadow-black/40 border-2 border-slate-800">
+                <img src="img/profile.jpg" alt="Adam Janes" class="w-64 h-64 lg:w-80 lg:h-80 rounded-2xl object-cover shadow-2xl shadow-black/60 border border-line">
             </div>
         </div>
     </section>
 
     <!-- Problem -->
-    <section class="py-24 sm:py-32">
+    <section class="py-24 sm:py-32 bg-canvas">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-12">The hiring trap</h2>
-            <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+            <p class="text-sand font-medium mb-4 tracking-label uppercase text-xs">The problem</p>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-12 text-ink">The hiring trap</h2>
+            <div class="space-y-6 text-lg text-body leading-relaxed">
                 <p>Most startups burn through their first six months trying to build a tech team before they've built a product.</p>
                 <p>A full-time CTO costs $250K+ before they write a line of code. Agencies charge six figures for a prototype and hand you a codebase nobody can maintain. And that offshore team you found on a freelancer platform? They'll build exactly what you asked for — which is never quite what you needed.</p>
                 <p>Meanwhile, your competitors shipped last month.</p>
-                <p class="text-slate-900 font-medium text-xl border-l-4 border-amber-400 pl-6 py-2">There's a simpler model: hire one senior technical person who architects, builds, and ships — and who has enough skin in the game to care whether it works.</p>
+                <div class="border border-dashed border-sand rounded-2xl p-7 mt-10 bg-sand-subtle">
+                    <p class="text-ink font-medium text-xl leading-relaxed">There's a simpler model: hire one senior technical person who architects, builds, and ships — and who has enough skin in the game to care whether it works.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-24 sm:py-32 bg-slate-50">
+    <section id="services" class="py-24 sm:py-32 bg-surface border-y border-line">
         <div class="max-w-6xl mx-auto px-6">
-            <p class="text-amber-600 font-semibold mb-4 tracking-widest uppercase text-sm">Services</p>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Three ways to work together</h2>
-            <p class="text-lg text-slate-600 mb-16 max-w-2xl">Every engagement is different. Pick the model that fits your stage, or we'll figure out the right combination together.</p>
+            <p class="text-sand font-medium mb-4 tracking-label uppercase text-xs">Services</p>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-ink">Three ways to work together</h2>
+            <p class="text-lg text-body mb-16 max-w-2xl">Every engagement is different. Pick the model that fits your stage, or we'll figure out the right combination together.</p>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 flex flex-col">
-                    <span class="text-5xl font-extrabold text-slate-100 mb-6">01</span>
-                    <h3 class="text-xl font-bold mb-2">Full Fractional CTO</h3>
-                    <p class="text-amber-600 text-sm font-medium mb-6">Monthly retainer + equity</p>
-                    <p class="text-slate-600 leading-relaxed mb-6">Your technical co-founder — without giving up half your company. I embed in your team as CTO. I make architecture decisions, write production code, review pull requests, and hire developers when you need them.</p>
-                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Architecture, code, and technical strategy</li>
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>I take equity because I back what I build</li>
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Weekly calls, daily availability</li>
+                <div class="bg-canvas rounded-2xl border border-line p-8 sm:p-10 hover:border-sand hover:bg-sand-subtle transition-all duration-300 flex flex-col">
+                    <span class="font-heading text-5xl font-extrabold text-line mb-6">01</span>
+                    <h3 class="font-heading text-xl font-bold mb-2 text-ink">Full Fractional CTO</h3>
+                    <p class="text-sand text-sm font-medium mb-6">Monthly retainer + equity</p>
+                    <p class="text-body leading-relaxed mb-6">Your technical co-founder — without giving up half your company. I embed in your team as CTO. I make architecture decisions, write production code, review pull requests, and hire developers when you need them.</p>
+                    <ul class="space-y-3 text-body mb-8 flex-grow">
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>Architecture, code, and technical strategy</li>
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>I take equity because I back what I build</li>
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>Weekly calls, daily availability</li>
                     </ul>
-                    <p class="text-sm text-slate-500 pt-6 border-t border-slate-100"><span class="font-medium text-slate-700">Best for:</span> Pre-seed to Series A startups that need a senior technical leader who builds, not just advises.</p>
+                    <p class="text-sm text-muted pt-6 border-t border-line-subtle"><span class="font-medium text-strong">Best for:</span> Pre-seed to Series A startups that need a senior technical leader who builds, not just advises.</p>
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 flex flex-col">
-                    <span class="text-5xl font-extrabold text-slate-100 mb-6">02</span>
-                    <h3 class="text-xl font-bold mb-2">Micro Fractional</h3>
-                    <p class="text-amber-600 text-sm font-medium mb-6">A few hours per day</p>
-                    <p class="text-slate-600 leading-relaxed mb-6">Your team has builders. They need an architect. I design your system, review your code, and set the technical direction. Your developers handle implementation under my guidance.</p>
-                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>System design and code reviews</li>
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Technical mentorship for your team</li>
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Standards that prevent costly rework</li>
+                <div class="bg-canvas rounded-2xl border border-line p-8 sm:p-10 hover:border-sand hover:bg-sand-subtle transition-all duration-300 flex flex-col">
+                    <span class="font-heading text-5xl font-extrabold text-line mb-6">02</span>
+                    <h3 class="font-heading text-xl font-bold mb-2 text-ink">Micro Fractional</h3>
+                    <p class="text-sand text-sm font-medium mb-6">A few hours per day</p>
+                    <p class="text-body leading-relaxed mb-6">Your team has builders. They need an architect. I design your system, review your code, and set the technical direction. Your developers handle implementation under my guidance.</p>
+                    <ul class="space-y-3 text-body mb-8 flex-grow">
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>System design and code reviews</li>
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>Technical mentorship for your team</li>
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>Standards that prevent costly rework</li>
                     </ul>
-                    <p class="text-sm text-slate-500 pt-6 border-t border-slate-100"><span class="font-medium text-slate-700">Best for:</span> Companies that have developers but lack senior technical leadership.</p>
+                    <p class="text-sm text-muted pt-6 border-t border-line-subtle"><span class="font-medium text-strong">Best for:</span> Companies that have developers but lack senior technical leadership.</p>
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 hover:shadow-lg transition-shadow duration-300 flex flex-col">
-                    <span class="text-5xl font-extrabold text-slate-100 mb-6">03</span>
-                    <h3 class="text-xl font-bold mb-2">Managed Development</h3>
-                    <p class="text-amber-600 text-sm font-medium mb-6">My network, your roadmap</p>
-                    <p class="text-slate-600 leading-relaxed mb-6">I source and manage developers from my network in Vietnam. I handle recruitment, onboarding, technical direction, and quality control. You get a fully managed dev capability.</p>
-                    <ul class="space-y-3 text-slate-600 mb-8 flex-grow">
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Vetted developers I've trained and trust</li>
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>AI-enabled workflow for faster output</li>
-                        <li class="flex gap-3"><span class="text-amber-500 mt-1 flex-shrink-0">&#9656;</span>Scales up or down with the project</li>
+                <div class="bg-canvas rounded-2xl border border-line p-8 sm:p-10 hover:border-sand hover:bg-sand-subtle transition-all duration-300 flex flex-col">
+                    <span class="font-heading text-5xl font-extrabold text-line mb-6">03</span>
+                    <h3 class="font-heading text-xl font-bold mb-2 text-ink">Managed Development</h3>
+                    <p class="text-sand text-sm font-medium mb-6">My network, your roadmap</p>
+                    <p class="text-body leading-relaxed mb-6">I source and manage developers from my network in Vietnam. I handle recruitment, onboarding, technical direction, and quality control. You get a fully managed dev capability.</p>
+                    <ul class="space-y-3 text-body mb-8 flex-grow">
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>Vetted developers I've trained and trust</li>
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>AI-enabled workflow for faster output</li>
+                        <li class="flex gap-3"><span class="text-sand mt-1 flex-shrink-0">&rarr;</span>Scales up or down with the project</li>
                     </ul>
-                    <p class="text-sm text-slate-500 pt-6 border-t border-slate-100"><span class="font-medium text-slate-700">Best for:</span> Projects that need more capacity than one person can provide.</p>
+                    <p class="text-sm text-muted pt-6 border-t border-line-subtle"><span class="font-medium text-strong">Best for:</span> Projects that need more capacity than one person can provide.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Approach -->
-    <section id="approach" class="py-24 sm:py-32 bg-slate-950 text-white">
+    <section id="approach" class="py-24 sm:py-32 bg-canvas">
         <div class="max-w-6xl mx-auto px-6">
-            <p class="text-amber-400 font-semibold mb-4 tracking-widest uppercase text-sm">Approach</p>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">How I work</h2>
-            <p class="text-lg text-slate-400 mb-16 max-w-2xl">Four principles that shape every engagement. No exceptions.</p>
+            <p class="text-sand font-medium mb-4 tracking-label uppercase text-xs">Approach</p>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-ink">How I work</h2>
+            <p class="text-lg text-body mb-16 max-w-2xl">Four principles that shape every engagement. No exceptions.</p>
 
             <div class="grid sm:grid-cols-2 gap-12 sm:gap-16">
-                <div class="border-l-2 border-amber-400/40 pl-8">
-                    <h3 class="text-xl font-bold mb-4">Architecture First</h3>
-                    <p class="text-slate-400 leading-relaxed">We define what we're building before we build it. Data models, user flows, API boundaries, deployment strategy. I've seen too many startups burn money rebuilding something that was never properly designed.</p>
+                <div class="border-l-2 border-sand/40 pl-8">
+                    <h3 class="font-heading text-xl font-bold mb-4 text-ink">Architecture First</h3>
+                    <p class="text-body leading-relaxed">We define what we're building before we build it. Data models, user flows, API boundaries, deployment strategy. I've seen too many startups burn money rebuilding something that was never properly designed.</p>
                 </div>
-                <div class="border-l-2 border-amber-400/40 pl-8">
-                    <h3 class="text-xl font-bold mb-4">Standard Tools</h3>
-                    <p class="text-slate-400 leading-relaxed">Supabase, Vercel, Stripe, established auth providers. The best technology is the one everyone else has already debugged. I'm not going to use your runway to beta-test someone else's framework.</p>
+                <div class="border-l-2 border-sand/40 pl-8">
+                    <h3 class="font-heading text-xl font-bold mb-4 text-ink">Standard Tools</h3>
+                    <p class="text-body leading-relaxed">Supabase, Vercel, Stripe, established auth providers. The best technology is the one everyone else has already debugged. I'm not going to use your runway to beta-test someone else's framework.</p>
                 </div>
-                <div class="border-l-2 border-amber-400/40 pl-8">
-                    <h3 class="text-xl font-bold mb-4">AI-First Development</h3>
-                    <p class="text-slate-400 leading-relaxed">I run a system of specialised AI agents under my direction — architect, designer, executor, reviewer. Think of it like a construction site: I'm the foreman, the AI is the crew. The architecture and quality bar are mine. The speed isn't something a solo human can match.</p>
+                <div class="border-l-2 border-sand/40 pl-8">
+                    <h3 class="font-heading text-xl font-bold mb-4 text-ink">AI-First Development</h3>
+                    <p class="text-body leading-relaxed">I run a system of specialised AI agents under my direction — architect, designer, executor, reviewer. Think of it like a construction site: I'm the foreman, the AI is the crew. The architecture and quality bar are mine. The speed isn't something a solo human can match.</p>
                 </div>
-                <div class="border-l-2 border-amber-400/40 pl-8">
-                    <h3 class="text-xl font-bold mb-4">Full Transparency</h3>
-                    <p class="text-slate-400 leading-relaxed">You'll understand every technical decision and why it was made. No black boxes. No jargon as a substitute for clarity. If I can't explain a decision simply, I haven't thought about it enough.</p>
+                <div class="border-l-2 border-sand/40 pl-8">
+                    <h3 class="font-heading text-xl font-bold mb-4 text-ink">Full Transparency</h3>
+                    <p class="text-body leading-relaxed">You'll understand every technical decision and why it was made. No black boxes. No jargon as a substitute for clarity. If I can't explain a decision simply, I haven't thought about it enough.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Track Record -->
-    <section class="py-24 sm:py-32 border-b border-slate-100">
+    <section class="py-24 sm:py-32 bg-surface border-y border-line">
         <div class="max-w-6xl mx-auto px-6">
-            <p class="text-amber-600 font-semibold mb-4 tracking-widest uppercase text-sm">Track Record</p>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-16">What I've built</h2>
+            <p class="text-sand font-medium mb-4 tracking-label uppercase text-xs">Track Record</p>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-16 text-ink">What I've built</h2>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div>
-                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-6 h-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /></svg>
+                    <div class="w-12 h-12 bg-sand-subtle border border-line rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-sand" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" /></svg>
                     </div>
-                    <h3 class="font-bold mb-2">Talent Marketplace</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Full platform with candidate profiles, admin portal, agreement flows, and AI-powered job description generation. 1,000+ candidates onboarded.</p>
+                    <h3 class="font-heading font-bold mb-2 text-ink">Talent Marketplace</h3>
+                    <p class="text-body text-sm leading-relaxed">Full platform with candidate profiles, admin portal, agreement flows, and AI-powered job description generation. 1,000+ candidates onboarded.</p>
                 </div>
                 <div>
-                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-6 h-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+                    <div class="w-12 h-12 bg-sand-subtle border border-line rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-sand" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" /></svg>
                     </div>
-                    <h3 class="font-bold mb-2">Digital Community</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Citizen dashboard, interactive world map, event integration, and profile system for a 400-member global digital nation.</p>
+                    <h3 class="font-heading font-bold mb-2 text-ink">Digital Community</h3>
+                    <p class="text-body text-sm leading-relaxed">Citizen dashboard, interactive world map, event integration, and profile system for a 400-member global digital nation.</p>
                 </div>
                 <div>
-                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-6 h-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864a4.5 4.5 0 0 1 0 6.636.883.883 0 0 0-.405.864v.568M8.25 10.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75Zm2.25-4.5a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75Zm0 9a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM12 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9 9 9 0 0 0-9 9 9 9 0 0 0 9 9Z" /></svg>
+                    <div class="w-12 h-12 bg-sand-subtle border border-line rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-sand" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864a4.5 4.5 0 0 1 0 6.636.883.883 0 0 0-.405.864v.568M8.25 10.5a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75Zm2.25-4.5a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75Zm0 9a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM12 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9 9 9 0 0 0-9 9 9 9 0 0 0 9 9Z" /></svg>
                     </div>
-                    <h3 class="font-bold mb-2">Carbon Credit Verification</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">MVP for a climate-tech startup tracking carbon credits from mangrove habitat rehabilitation in Australia. Ethereum smart contracts with on-chain field measurements and decentralised storage for full provenance.</p>
+                    <h3 class="font-heading font-bold mb-2 text-ink">Carbon Credit Verification</h3>
+                    <p class="text-body text-sm leading-relaxed">MVP for a climate-tech startup tracking carbon credits from mangrove habitat rehabilitation in Australia. Ethereum smart contracts with on-chain field measurements and decentralised storage for full provenance.</p>
                 </div>
                 <div>
-                    <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-6 h-6 text-slate-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>
+                    <div class="w-12 h-12 bg-sand-subtle border border-line rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-sand" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>
                     </div>
-                    <h3 class="font-bold mb-2">Fintech Data Provider</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Research platform for investors to discover, compare, and track fintech companies — funding rounds, company profiles, competitive landscape. Led a team of 20+ developers as fractional CTO.</p>
+                    <h3 class="font-heading font-bold mb-2 text-ink">Fintech Data Provider</h3>
+                    <p class="text-body text-sm leading-relaxed">Research platform for investors to discover, compare, and track fintech companies — funding rounds, company profiles, competitive landscape. Led a team of 20+ developers as fractional CTO.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Side Projects -->
-    <section class="py-24 sm:py-32 bg-slate-50">
+    <section class="py-24 sm:py-32 bg-canvas">
         <div class="max-w-6xl mx-auto px-6">
-            <p class="text-amber-600 font-semibold mb-4 tracking-widest uppercase text-sm">Side Projects</p>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-6">Things I've made for fun</h2>
-            <p class="text-lg text-slate-600 mb-16 max-w-2xl">Not everything has to be a startup. Some of the most interesting things I've built were just because I wanted to.</p>
+            <p class="text-sand font-medium mb-4 tracking-label uppercase text-xs">Side Projects</p>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-ink">Things I've made for fun</h2>
+            <p class="text-lg text-body mb-16 max-w-2xl">Not everything has to be a startup. Some of the most interesting things I've built were just because I wanted to.</p>
 
             <div class="grid sm:grid-cols-3 gap-8">
-                <a href="https://www.udemy.com/course/masteringd3js/" target="_blank" rel="noopener" class="group bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
+                <a href="https://www.udemy.com/course/masteringd3js/" target="_blank" rel="noopener" class="group bg-surface rounded-2xl border border-line p-8 hover:border-sand hover:bg-sand-subtle transition-all duration-300">
+                    <div class="w-12 h-12 bg-sand-subtle border border-line rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-sand" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
                     </div>
-                    <h3 class="font-bold mb-1 group-hover:text-amber-600 transition-colors">Mastering D3.js</h3>
-                    <p class="text-amber-600 text-sm font-medium mb-4">Udemy Course &middot; 27,000+ students</p>
-                    <p class="text-slate-600 text-sm leading-relaxed">Complete course on building interactive data visualisations with D3.js. From bar charts to force-directed graphs.</p>
+                    <h3 class="font-heading font-bold mb-1 text-ink group-hover:text-sand transition-colors">Mastering D3.js</h3>
+                    <p class="text-sand text-sm font-medium mb-4">Udemy Course &middot; 27,000+ students</p>
+                    <p class="text-body text-sm leading-relaxed">Complete course on building interactive data visualisations with D3.js. From bar charts to force-directed graphs.</p>
                 </a>
 
-                <a href="http://woofcode.com/" target="_blank" rel="noopener" class="group bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" /></svg>
+                <a href="http://woofcode.com/" target="_blank" rel="noopener" class="group bg-surface rounded-2xl border border-line p-8 hover:border-sand hover:bg-sand-subtle transition-all duration-300">
+                    <div class="w-12 h-12 bg-sand-subtle border border-line rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-sand" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" /></svg>
                     </div>
-                    <h3 class="font-bold mb-1 group-hover:text-amber-600 transition-colors">WoofCode</h3>
-                    <p class="text-amber-600 text-sm font-medium mb-4">Free Coding Bootcamp &middot; 400+ students</p>
-                    <p class="text-slate-600 text-sm leading-relaxed">Free learn-to-code programme. Two cohorts of ~200 students each, teaching web development fundamentals from scratch.</p>
+                    <h3 class="font-heading font-bold mb-1 text-ink group-hover:text-sand transition-colors">WoofCode</h3>
+                    <p class="text-sand text-sm font-medium mb-4">Free Coding Bootcamp &middot; 400+ students</p>
+                    <p class="text-body text-sm leading-relaxed">Free learn-to-code programme. Two cohorts of ~200 students each, teaching web development fundamentals from scratch.</p>
                 </a>
 
-                <a href="https://www.16insecurities.com/" target="_blank" rel="noopener" class="group bg-white rounded-2xl border border-slate-200 p-8 hover:shadow-lg transition-all duration-300">
-                    <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-5">
-                        <svg class="w-6 h-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" /></svg>
+                <a href="https://www.16insecurities.com/" target="_blank" rel="noopener" class="group bg-surface rounded-2xl border border-line p-8 hover:border-sand hover:bg-sand-subtle transition-all duration-300">
+                    <div class="w-12 h-12 bg-sand-subtle border border-line rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-sand" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" /></svg>
                     </div>
-                    <h3 class="font-bold mb-1 group-hover:text-amber-600 transition-colors">16 Insecurities</h3>
-                    <p class="text-amber-600 text-sm font-medium mb-4">Parody Personality Test</p>
-                    <p class="text-slate-600 text-sm leading-relaxed">A tongue-in-cheek MBTI-style personality test for dark personality traits. Because not every side project needs to be serious.</p>
+                    <h3 class="font-heading font-bold mb-1 text-ink group-hover:text-sand transition-colors">16 Insecurities</h3>
+                    <p class="text-sand text-sm font-medium mb-4">Parody Personality Test</p>
+                    <p class="text-body text-sm leading-relaxed">A tongue-in-cheek MBTI-style personality test for dark personality traits. Because not every side project needs to be serious.</p>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-24 sm:py-32">
+    <section id="about" class="py-24 sm:py-32 bg-canvas border-t border-line">
         <div class="max-w-3xl mx-auto px-6">
-            <p class="text-amber-600 font-semibold mb-4 tracking-widest uppercase text-sm">About</p>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-12">The short version</h2>
-            <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+            <p class="text-sand font-medium mb-4 tracking-label uppercase text-xs">About</p>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold tracking-tight mb-12 text-ink">The short version</h2>
+            <div class="space-y-6 text-lg text-body leading-relaxed">
                 <p>I've been working as a fractional CTO since 2021, helping early-stage startups get from an idea to a working product.</p>
                 <p>My background is in economics, not computer science. That shapes everything about how I approach technology: every technical decision is a business decision. I don't reach for the newest framework because it's exciting — I use whatever gets you to market fastest with the least risk.</p>
                 <p>Over the past five years I've built products across Singapore, Vietnam, Australia, and the UK. I've managed remote development teams, run technical due diligence, and shipped production code for companies ranging from pre-revenue startups to funded scale-ups.</p>
                 <p>In 2025, I rebuilt my entire workflow around AI-first development. Not because it's fashionable — because the economics changed. One person with the right process and the right tools can now deliver what used to take a five-person team. I've structured my whole practice around that shift.</p>
-                <p class="text-slate-900 font-medium">Based in Sydney, Australia. Originally from York, UK.</p>
+                <p class="text-strong font-medium">Based in Sydney, Australia. Originally from York, UK.</p>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="py-24 sm:py-32 bg-slate-950 text-white">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6">Let's build something.</h2>
-            <p class="text-xl text-slate-400 mb-12 leading-relaxed">The best way to start is a conversation. No pitch deck required — just tell me what you're building and where you're stuck.</p>
+    <section id="contact" class="py-24 sm:py-32 bg-canvas border-t border-line relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(212,196,160,0.06)_0%,_transparent_55%)]"></div>
+        <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+            <h2 class="font-heading text-4xl sm:text-5xl font-bold tracking-tight mb-6 text-ink">Let's build something.</h2>
+            <p class="text-xl text-body mb-12 leading-relaxed">The best way to start is a conversation. No pitch deck required — just tell me what you're building and where you're stuck.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <a href="mailto:Adam.Michael.Janes@gmail.com" class="inline-flex items-center justify-center px-8 py-4 bg-amber-400 text-slate-950 font-semibold rounded-lg hover:bg-amber-300 transition-colors text-lg">Email me</a>
-                <a href="https://linkedin.com/in/adamjanes" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 border border-slate-700 text-slate-300 font-medium rounded-lg hover:border-slate-500 hover:text-white transition-colors text-lg">LinkedIn</a>
+                <a href="mailto:Adam.Michael.Janes@gmail.com" class="inline-flex items-center justify-center px-8 py-4 bg-sand text-canvas font-semibold rounded-lg hover:bg-sand-hover transition-colors text-lg">Email me</a>
+                <a href="https://linkedin.com/in/adamjanes" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-8 py-4 border border-line text-strong font-medium rounded-lg hover:border-sand hover:text-ink transition-colors text-lg">LinkedIn</a>
             </div>
-            <div class="flex justify-center gap-8 text-sm text-slate-500">
-                <a href="https://github.com/adamjanes" target="_blank" rel="noopener" class="hover:text-slate-300 transition-colors">GitHub</a>
-                <span class="text-slate-700">|</span>
+            <div class="flex justify-center gap-8 text-sm text-muted">
+                <a href="https://github.com/adamjanes" target="_blank" rel="noopener" class="hover:text-strong transition-colors">GitHub</a>
+                <span class="text-line">|</span>
                 <span>Sydney, Australia</span>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-8">
-        <div class="max-w-6xl mx-auto px-6 text-center text-sm text-slate-600">
-            &copy; 2026 Adam Janes. All rights reserved.
+    <footer class="bg-canvas border-t border-line py-8">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-muted">
+            <span>&copy; 2026 Adam Janes</span>
+            <span class="font-mono text-xs tracking-wider">admjns.com</span>
         </div>
     </footer>
 
     <script>
-        // Nav scroll effect
+        // Nav scroll effect — dark-aware
         const nav = document.getElementById('nav');
-        const heroHeight = window.innerHeight;
 
         function updateNav() {
-            if (window.scrollY > heroHeight - 100) {
-                nav.classList.add('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-slate-200');
-                nav.querySelector('a').classList.remove('text-white');
-                nav.querySelector('a').classList.add('text-slate-900');
-                nav.querySelectorAll('.hidden a').forEach(function(a) {
-                    a.classList.remove('text-slate-400');
-                    a.classList.add('text-slate-600');
-                    a.classList.remove('hover:text-white');
-                    a.classList.add('hover:text-slate-900');
-                });
+            if (window.scrollY > 40) {
+                nav.classList.add('bg-canvas/80', 'backdrop-blur-md', 'border-b', 'border-line');
             } else {
-                nav.classList.remove('bg-white/90', 'backdrop-blur-md', 'border-b', 'border-slate-200');
-                nav.querySelector('a').classList.add('text-white');
-                nav.querySelector('a').classList.remove('text-slate-900');
-                nav.querySelectorAll('.hidden a').forEach(function(a) {
-                    a.classList.add('text-slate-400');
-                    a.classList.remove('text-slate-600');
-                    a.classList.add('hover:text-white');
-                    a.classList.remove('hover:text-slate-900');
-                });
+                nav.classList.remove('bg-canvas/80', 'backdrop-blur-md', 'border-b', 'border-line');
             }
         }
 
