@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/linkedin", "destination": "https://desk.admjns.com/linkedin" },
+    { "source": "/linkedin/:path*", "destination": "https://desk.admjns.com/linkedin/:path*" }
+  ]
+}
